@@ -1,10 +1,13 @@
 import './styles.scss';
+import ParticlesContainer from './particles.js';
+
+// figma design https://www.figma.com/file/24mDiMckplH7BUcGwQfnJW/ProjectPrometheus
+// 
+
 
 function App() {
   return (
     <>
-      <center><h1 className='centered'>Prometheus.</h1></center>
-
       <Pages.Home />
     </>
   );
@@ -14,6 +17,7 @@ class Pages{
   static Home(){
     return (
       <Sections.Landing />
+      
     );
   }
 
@@ -27,21 +31,42 @@ class Pages{
 class Sections {
   static Landing() {
     return (
-      <MenuBar />
+      <ParticlesContainer children={
+        <div className='f1'>
+          <NavBar />
+          <Name />
+        </div>
+      }/>
+      
     );
   }
 }
 
-function MenuBar (){
+function NavBar (){
   return (
-    <div className='nav-bar centered row'>
-      <a className='nav'>Home</a> 
-      <a className='nav'>About Us</a>
-      <a className='nav'>Projects</a>
-      <a className='nav'>Articles</a>
-      <a className='nav'>Editorials</a>
+    
+    <div className='navbar row center'>
+      <a class='navbar'>Home</a> 
+      <a class='navbar'>About Us</a>
+      <a class='navbar'>Projects</a>
+      <a class='navbar'>Articles</a>
+      <a class='navbar'>Editorials</a>
     </div>
 
+    
+
+  );
+}
+
+function Name (){
+  return (
+    <div className='center'>
+      <div className='name row center'>
+        <h2 className='name vertical-text'>project</h2>
+        <h1 className='name'>prometheus</h1>
+      </div>
+
+    </div>
   );
 }
 

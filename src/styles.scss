@@ -1,28 +1,69 @@
-$global-red: #FF9400;
+// global colors
 
+$global-orange: #FF9400;
 
-.ecolor{
-    background-color: $global-red;
+//global fonts
+
+.f1 {
+    font-family: 'Bebas Neue', cursive;
 }
 
-.yellow-text{
-    color: #FFFF00;
-}
-
-.nav-bar{
-    display: flex;
-    flex-direction: row;
-}
+// global shortcuts
 
 .row{
     display: flex;
     flex-direction: row;
+    
 }
 
-.centered{
-    justify-content: center;
+.center{ justify-content: center; } // use with flexbox
+
+.vertical-text { 
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
 }
 
-.nav{
-    margin: 0 20px;
-}
+
+// specific styles
+
+
+// nav bar
+    div.navbar{
+
+        margin-top: 10px;
+    }
+
+    a.navbar{
+        margin: 0 10px;
+        color:grey;
+    }
+
+
+// name
+    div.name{ // container
+
+        margin-top: 100px;
+        text-align: left;
+        
+    }
+
+    h1.name{ // PROMETHEUS
+        position: relative;
+        bottom: -35px;
+
+        font-size: 105px;
+        align-self: floor;
+        
+        margin: 0px;
+    }
+
+    h2.name{ // PROJECT
+            
+        font-size: 30px;
+        align-self: floor;
+        color: $global-orange;
+        margin: 0px;
+        
+
+    }
+
