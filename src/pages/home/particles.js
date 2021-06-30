@@ -1,13 +1,13 @@
 import Particles from 'react-particles-js';
-import './styles.scss'
+import './home.scss'
 
 // documentation https://www.npmjs.com/package/react-particles-js
 // working example code https://codesandbox.io/s/4k5z9xx0w?file=/src/ParticleComponent.js:95-224
 
 function ParticlesContainer({ children }) {
     return (
-        <div>
-            <div >
+        <>
+            <div>
                 
                 <Particles
                 params={{
@@ -131,7 +131,7 @@ function ParticlesContainer({ children }) {
             <div className='background'>
                 {children}
             </div>
-        </div>
+        </>
     );
 
 }

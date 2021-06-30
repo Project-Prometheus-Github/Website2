@@ -1,0 +1,63 @@
+@import '../../global/global.scss';
+
+// name
+    div.name{ // container excluding motto
+
+        margin-top: 100px;
+        text-align: left;
+
+        justify-self: center;
+        
+    }
+
+    h1.name{ // PROMETHEUS
+        position: relative;
+        bottom: -57px;
+
+        font-size: 175px;
+        align-self: floor;
+        
+        margin: 0px;
+    }
+
+    h2.name{ // PROJECT
+            
+        font-size: 50px;
+        align-self: floor;
+        color: $global-orange;
+        margin: 0px;
+        
+
+    }
+
+    h3.name{ // slogan
+            
+        font-size: 36px;
+        align-self: floor;
+        color: $global-grey;
+        margin: 0px;
+        
+
+    }
+
+
+// icons
+    .icon-landing{
+        align-self: floor;
+    
+        align-items: floor;
+    }
+
+// statisic
+    section.statistic{
+        height: 200px;
+        background-color: purple;
+        align-items: center;
+    }
+
+    h1.statistic{
+        margin: 0px;
+        background-color: green;
+        color: red;
+
+    }
