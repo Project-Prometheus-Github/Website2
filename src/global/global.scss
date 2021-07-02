@@ -18,8 +18,8 @@ $global-grey: #999999;
     color:#FF9400;
     font-size: 34px;
     margin: 8px 0;
-
-    &:hover{
+ 
+    &:hover{              //'hover': built into css
         opacity: 0.6;
     }
 }
@@ -36,7 +36,9 @@ $global-grey: #999999;
     flex-direction: column;
 }
 
-.center { justify-content: center; } // use with flexbox
+.center-main { justify-content: center; } // use with flexbox
+
+.center-cross { align-items: center; }
 
 .vertical-text { 
     writing-mode: vertical-lr; 
