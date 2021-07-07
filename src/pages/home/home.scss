@@ -1,6 +1,11 @@
 @import '../../global/global.scss';
 
 // name
+    section.name{
+        align-self: center;
+    }
+
+
     div.name{ // container excluding motto
 
         margin-top: 100px;
@@ -37,15 +42,16 @@
         color: $global-grey;
         margin: 0px;
         
+        position: relative;
+        right: -10px;
 
     }
 
 
 // icons
     .icon-landing{
-        align-self: floor;
-    
-        align-items: floor;
+        justify-self: center;
+        margin-left: auto;
     }
 
 // statisic

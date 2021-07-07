@@ -18,9 +18,12 @@ $global-grey: #999999;
     color:#FF9400;
     font-size: 34px;
     margin: 8px 0;
+    cursor: pointer;
+    
+    transition-duration: 0.4s;
  
     &:hover{              //'hover': built into css
-        opacity: 0.6;
+        transform: rotate(1turn) scale(1.4);
     }
 }
 
@@ -58,7 +61,6 @@ $global-grey: #999999;
 
 // nav bar
     div.navbar{
-
         margin-top: 10px;
     }
 
@@ -66,4 +68,14 @@ $global-grey: #999999;
         margin: 0 10px;
         color: $global-grey;
         font-size: 28px;
+        cursor: pointer;
+
+        &:hover{    //'hover': built into css
+            opacity: 0.6;
+            
+        }
+
+        .pointer {
+            cursor: pointer;
+        }
     }

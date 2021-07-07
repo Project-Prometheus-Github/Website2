@@ -8,7 +8,7 @@ function NavBar (){
         <a className='navbar'>About Us</a>
         <a className='navbar'>Projects</a>
         <a className='navbar'>Articles</a>
-        <a class='navbar'>Editorials</a>
+        <a className='navbar'>Editorials</a>
       </div>
   
       

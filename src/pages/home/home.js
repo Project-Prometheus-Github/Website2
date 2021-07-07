@@ -21,16 +21,14 @@ function HomePage(){
 // sections of the home page
 function Landing() {
     return (
-        <ParticlesContainer children={
-          <div>
-            <NavBar />
-            <div className='row'>
-              <Name />
-              <SocialMediaIconsLanding />
-            </div>
+        <ParticlesContainer>
+          <NavBar />
+          <div className='row'>            
+            <Name />
+            <SocialMediaIconsLanding />
           </div>
-          }
-          />
+
+        </ParticlesContainer>
     );
 }
 
@@ -63,13 +61,15 @@ function Initiatives(){
 // COMPONENTS
 function Name(){
   return (
-    <section className='name'>
-      <div className='row center-main f1'>
-        <h2 className='name vertical-text'>project</h2>
-        <h1>prometheus</h1>
-        
-      </div>
-      <h3 className='f2'>Ignite the mind. Pass on the torch.</h3>
+    <section className='name column center-cross'>
+      <div className='column'>
+          <div className='row center-main f1'>
+            <h2 className='name vertical-text'>project</h2>
+            <h1 className='name'>prometheus</h1>
+            
+          </div>
+          <h3 className='name f2'>Ignite the mind. Pass on the torch.</h3>
+        </div>
     </section>
   );
 }
