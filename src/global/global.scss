@@ -14,17 +14,22 @@ $global-grey: #999999;
     font-family: 'Hind',sans-serif;
 }
 
+@mixin hover-anim{
+    transition-duration: 0.4s;
+ 
+    &:hover{              //'hover': built into css
+        transform: rotate(1turn) scale(1.3);
+    }
+}
+
 .icon{
     color:#FF9400;
     font-size: 34px;
     margin: 8px 0;
     cursor: pointer;
     
-    transition-duration: 0.4s;
- 
-    &:hover{              //'hover': built into css
-        transform: rotate(1turn) scale(1.4);
-    }
+    @include hover-anim();
+
 }
 
 // global shortcuts
@@ -62,6 +67,7 @@ $global-grey: #999999;
 // nav bar
     div.navbar{
         margin-top: 10px;
+        align-items: flex-start;
     }
 
     a.navbar{
@@ -79,3 +85,8 @@ $global-grey: #999999;
             cursor: pointer;
         }
     }
+
+.spin{
+    
+    @include hover-anim();
+}

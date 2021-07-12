@@ -22,20 +22,22 @@ function HomePage(){
 function Landing() {
     return (
         <ParticlesContainer>
-          <NavBar />
-          <div className='row'>            
-            <Name />
-            <SocialMediaIconsLanding />
-          </div>
+          <NavBar />       
+          <Name />
+          <SocialMediaIconsLanding />
 
         </ParticlesContainer>
     );
 }
 
 function Statistic(){
+
+  var x = 3
+  var y = 9
+
   return (
     <section className='statistic row center-main'>
-      <h1 className='statistic'>diawdjiaw</h1>
+      <h1 className='statistic f2'>{x} Articles shared. {y} Editorials written.</h1>
     </section>
     
   );
@@ -86,7 +88,7 @@ function SocialMediaIconsLanding(){
 }
 
 
-function Tile({ title, text, image, onClick, background}) { // must be a part of a grid
+function Tile({ title, text, image, onClick, background }) { // must be a part of a grid
   var style = {
     backgroundImage: image,
     gridArea: title.toLowerCase(), 

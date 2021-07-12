@@ -3,6 +3,7 @@
 // name
     section.name{
         align-self: center;
+        margin-right: auto;
     }
 
 
@@ -43,7 +44,7 @@
         margin: 0px;
         
         position: relative;
-        right: -10px;
+        left: 10px;
 
     }
 
@@ -51,20 +52,22 @@
 // icons
     .icon-landing{
         justify-self: center;
-        margin-left: auto;
+
+        position: absolute;
+        right: 10px;
     }
 
 // statisic
     section.statistic{
         height: 200px;
-        background-color: purple;
+        background-color: black;
         align-items: center;
+        margin-bottom: 10px;
     }
 
     h1.statistic{
-        margin: 0px;
-        background-color: green;
-        color: red;
+        margin: 10px;
+        color: white;
 
     }
 
