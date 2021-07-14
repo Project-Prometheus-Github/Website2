@@ -2,8 +2,12 @@
 
 // name
     section.name{
-        align-self: center;
+        
         margin-right: auto;
+
+        margin-top: 250px;
+        margin-bottom: 400px;
+       
     }
 
 
@@ -13,6 +17,7 @@
         text-align: left;
 
         justify-self: center;
+        
         
     }
 
@@ -53,8 +58,11 @@
     .icon-landing{
         justify-self: center;
 
-        position: absolute;
-        right: 10px;
+        position: fixed;
+        right: 70px;
+        
+        top: calc(50vh - 100px) !important;
+
     }
 
 // statisic
@@ -62,7 +70,12 @@
         height: 200px;
         background-color: black;
         align-items: center;
+        
         margin-bottom: 10px;
+
+
+        
+        @include page-margin;
     }
 
     h1.statistic{
@@ -75,14 +88,17 @@
 // tile
     .tile-text{
         color:white;
-        font-size:50px;
+        font-size: 50px;
     }
     
     div.tile{
         //background-color:black;
+        
     }
 
     .initiatives-grid{
+        @include page-margin;
+
         display: grid;
         grid-template-columns: repeat(3, 1fr); // 1fr 1fr 1fr
         grid-template-rows: repeat(2, 1fr);

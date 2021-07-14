@@ -1,5 +1,5 @@
 import Particles from 'react-particles-js';
-import './home.scss'
+import "./global/global.scss";
 
 // documentation https://www.npmjs.com/package/react-particles-js
 // working example code https://codesandbox.io/s/4k5z9xx0w?file=/src/ParticleComponent.js:95-224
@@ -7,24 +7,17 @@ import './home.scss'
 function ParticlesContainer({ children }) {
     return (
         <>
-            <div>
+            <div className='background'>
                 
                 <Particles
                 params={{
                     particles: {
                     number: {
-                        value: 150,
+                        value: 60,
                         density: {
                         enable: true,
                         value_area: 1600
                         }
-                    },
-                    line_linked: {
-                        enable: true,
-                        distance: 200,
-                        opacity: 0.4, 
-                        color: "#FF9400"
-
                     },
                     color: {
                         value: "#FF9400"
@@ -68,7 +61,7 @@ function ParticlesContainer({ children }) {
                         enable: true,
                         distance: 200,
                         color: "#FF9400",
-                        opacity: 0.3,
+                        opacity: 0.4,
                         width: 0.6
                     },
                     move: {

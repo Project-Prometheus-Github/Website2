@@ -14,6 +14,7 @@
     "react-particles-js": "^3.5.3",
     "react-scripts": "4.0.3",
     "tsparticles": "^1.30.1",
+    "typewriting-react": "^1.0.5",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

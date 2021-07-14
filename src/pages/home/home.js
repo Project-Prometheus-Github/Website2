@@ -4,7 +4,7 @@ import './home.scss';
 import { IconContext } from "react-icons";
 import { FontAwesome } from "react-icons/fa";
 import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import ParticlesContainer from './particles.js';
+
 import NavBar from '../../global/components/navbar';
 
 
@@ -21,19 +21,19 @@ function HomePage(){
 // sections of the home page
 function Landing() {
     return (
-        <ParticlesContainer>
+        <>
           <NavBar />       
           <Name />
           <SocialMediaIconsLanding />
-
-        </ParticlesContainer>
+        </>
+        
     );
 }
 
 function Statistic(){
 
-  var x = 3
-  var y = 9
+  var x = 4
+  var y = 8
 
   return (
     <section className='statistic row center-main'>
@@ -95,9 +95,6 @@ function Tile({ title, text, image, onClick, background }) { // must be a part o
     backgroundColor: background
   }
 
-   console.log("asf");
-  console.log(background);
-
   return( // inline style
     <div className='tile row center-main center-cross' onClick={onClick} style={style}>
       <h1 className='f1 tile-text'>{title}</h1>
@@ -108,3 +105,5 @@ function Tile({ title, text, image, onClick, background }) { // must be a part o
 
 
 export default HomePage;
+
+
