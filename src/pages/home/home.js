@@ -7,6 +7,8 @@ import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import NavBar from '../../global/components/navbar';
 
+import Typing from '../../global/components/typing.js';
+
 
 function HomePage(){
   return (
@@ -66,11 +68,11 @@ function Name(){
     <section className='name column center-cross'>
       <div className='column'>
           <div className='row center-main f1'>
-            <h2 className='name vertical-text'>project</h2>
+            <h2 className='name vertical-text fire'>project</h2>
             <h1 className='name'>prometheus</h1>
             
           </div>
-          <h3 className='name f2'>Ignite the mind. Pass on the torch.</h3>
+          <Typing className='name f2' words={['Ignite the mind. Pass on the torch.','adam good']}/>
         </div>
     </section>
   );
