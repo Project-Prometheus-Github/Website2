@@ -1,16 +1,17 @@
 import '../global.scss';
 import PromLogo from '../../assets/logo1.png';
+import { Link } from 'react-router-dom';
 
 function NavBar (){
     return (
       
       <div className='navbar row center-main f1'>
         <ClickableImage className='navbar' source={PromLogo} size={35} style={{position: 'relative', bottom: 1}}/>
-        <a className='navbar'>Home</a> 
-        <a className='navbar'>About Us</a>
-        <a className='navbar'>Projects</a>
-        <a className='navbar'>Articles</a>
-        <a className='navbar'>Editorials</a>
+          <Link className='navbar'>Home</Link> 
+          <Link to='/about' className='navbar'>About Us</Link>
+          <Link className='navbar'>Projects</Link>
+          <Link className='navbar'>Articles</Link>
+          <Link className='navbar'>Editorials</Link>
 
       </div>
   

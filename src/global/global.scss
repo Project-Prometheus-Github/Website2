@@ -83,7 +83,7 @@ $global-grey: #999999;
         align-items: flex-start;
     }
 
-    a.navbar{
+    Line.navbar{
         margin: 0 10px;
         color: $global-grey;
         font-size: 28px;
@@ -102,6 +102,12 @@ $global-grey: #999999;
 .spin{
     
     @include hover-anim();
+}
+
+.testing{
+    &:hover{   
+        opacity: 0.2;
+    }
 }
 
 

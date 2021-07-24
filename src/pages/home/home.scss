@@ -1,8 +1,14 @@
 @import '../../global/global.scss';
 
+
+section{
+    @include page-margin;
+}
+
 // name
     section.name{
-        
+        width: 100vw;
+
         margin-right: auto;
 
         margin-top: 250px;
@@ -75,7 +81,6 @@
 
 
         
-        @include page-margin;
     }
 
     h1.statistic{
@@ -97,7 +102,6 @@
     }
 
     .initiatives-grid{
-        @include page-margin;
 
         display: grid;
         grid-template-columns: repeat(3, 1fr); // 1fr 1fr 1fr
@@ -109,6 +113,11 @@
         row-gap: 10px;
         column-gap: 10px;
     }
+ 
+.mission{
+    height: 300px;
+    justify-content: flex-start;
+}
 
 
     

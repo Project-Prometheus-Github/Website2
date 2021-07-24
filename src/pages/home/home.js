@@ -1,6 +1,7 @@
 
 import './home.scss';
 
+
 import { IconContext } from "react-icons";
 import { FontAwesome } from "react-icons/fa";
 import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -8,6 +9,7 @@ import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import NavBar from '../../global/components/navbar';
 
 import Typing from '../../global/components/typing.js';
+import Line from '../../global/components/horizontal-line.js'
 
 
 function HomePage(){
@@ -15,6 +17,7 @@ function HomePage(){
     <>
       <Landing />
       <Statistic />
+      <OurMission />
       <Initiatives />
     </>
   );
@@ -45,6 +48,22 @@ function Statistic(){
   );
 }
 
+
+function OurMission(){
+  
+  return(
+    <section className='mission column' >
+      <Line color='#FF9400' height={10} width={300} className='testing'/>
+      <h1 className ='f1 ' style={{color: "orange"}}>Our Mission</h1>
+      <h2 className = 'f2'  style={{color: "grey"}}> To spread the mesmerising apects of computer science and engineering to the world. </h2>
+      <h3 className = 'f2' style={{color: "black"}} >View our initiatives below.</h3>
+    </section>
+  )
+  
+}
+
+
+
 function Initiatives(){
   return(
     <section className='initiatives'>
@@ -61,7 +80,6 @@ function Initiatives(){
 }
 
 
-
 // COMPONENTS
 function Name(){
   return (
@@ -72,7 +90,7 @@ function Name(){
             <h1 className='name'>prometheus</h1>
             
           </div>
-          <Typing className='name f2' words={['Ignite the mind. Pass on the torch.','adam good']}/>
+          <Typing className='name f2' words={['abcdef', 'abcg']}/>
         </div>
     </section>
   );
@@ -90,6 +108,7 @@ function SocialMediaIconsLanding(){
 }
 
 
+
 function Tile({ title, text, image, onClick, background }) { // must be a part of a grid
   var style = {
     backgroundImage: image,
@@ -104,6 +123,9 @@ function Tile({ title, text, image, onClick, background }) { // must be a part o
     </div>
   );
 }
+
+
+
 
 
 export default HomePage;
