@@ -1,3 +1,4 @@
+
 import './home.scss';
 import PromLogo from '../../assets/logo1.png';
 
@@ -19,7 +20,6 @@ function HomePage(){
       <Statistic />
       <OurMission />
       <Initiatives />
-      <TestingThing />
     </>
   );
 }
@@ -27,13 +27,11 @@ function HomePage(){
 // sections of the home page
 function Landing() {
     return (
-          <div className='column landing'>
-            <NavBar />       
-            <Name />
-            <SocialMediaIconsLanding />
-          </div>
-
-          
+        <>
+          <NavBar />       
+          <Name />
+          <SocialMediaIconsLanding />
+        </>
         
     );
 }
@@ -45,7 +43,6 @@ function Statistic(){
 
   return (
     <section className='statistic row center-main'>
-      
       <h1 className='statistic f2'>{x} Articles shared. {y} Editorials written.</h1>
     </section>
     
@@ -77,7 +74,7 @@ function Initiatives(){
 
 
       <div className='initiatives-grid'>
-        <Tile title='Articles' text = 'bingus, arjun is a cool guy' onClick={() => {console.log("articles");}} background='#FF9400'/>
+        <Tile title='Articles'  onClick={() => {console.log("articles");}} background='#FF9400'/>
         <Tile title='Editorials' onClick={() => {console.log("editorials");}} background='#000000'/>
         <Tile title='CDSTechClub' onClick={() => {console.log("hello arjun");}} background='#008000'/>
         <Tile title='CCC' onClick={() => {console.log("adam hello");}} background='#FF0000'/>
@@ -97,9 +94,7 @@ function Name(){
           <h1 className='name'>prometheus</h1>
           
         </div>
-        <div className='typing-anim'>
-          <Typing className='f2' words={['Ignite the mind. Pass on the torch.']}/>
-        </div>
+        <Typing className='name f2' words={['Ignite the mind. Pass on the torch.']}/>
       </div>
     </section>
   );
@@ -107,7 +102,7 @@ function Name(){
 
 function SocialMediaIconsLanding(){
   return (
-    <div className='center-main icon-landing row moving2'>
+    <div className='icon-landing column'>
       <FaInstagram className='icon'/>
       <FaTwitter className='icon'/>
       <FaGithub className='icon'/>
@@ -119,7 +114,7 @@ function SocialMediaIconsLanding(){
 
 
 function Tile({ title, text, image, onClick, background }) { // must be a part of a grid
-  const style = {
+  var style = {
     backgroundImage: image,
     gridArea: title.toLowerCase(), 
     backgroundColor: background
@@ -133,18 +128,8 @@ function Tile({ title, text, image, onClick, background }) { // must be a part o
   );
 }
 
-function TestingThing(){
-  const style = {
-    width: '100px',
-    height: '100px',
-    background: 'red',
-    position: 'relative',
-  }
 
-  return(
-    <div className ='moving' style={style}> </div> 
-  )
-}
+
 
 
 export default HomePage;

@@ -26,8 +26,7 @@ componentWillUnmount() {
     return (
       <>
         <span
-          className={this.props.className}
-          style={{ whiteSpace: "pre"}}
+          style={{ whiteSpace: "pre" }}
           ref={(el) => {
             this.el = el;
           }}

@@ -18,9 +18,9 @@ function App() {
       <Switch>
 
         <Route exact path='/'>
-           <ParticlesContainer>
-              <HomePage />
-            </ParticlesContainer> 
+          <ParticlesContainer>
+            <HomePage />
+          </ParticlesContainer>
         </Route>
 
         <Route path='/about'>

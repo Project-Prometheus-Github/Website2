@@ -5,24 +5,27 @@ section{
     @include page-margin;
 }
 
-// landing
-    div.landing{
-        height: 100vh;
-    }
 
 // name
     section.name{
-        
-        width: 100%;
+        width: 100vw;
 
-        margin-top: auto;
-        margin-bottom: auto;
+        margin-right: auto;
 
+        margin-top: 250px;
+        margin-bottom: 400px;
        
+    }
 
-        // margin-top: 250px;
-        // margin-bottom: 400px;
-        // background-color: ;
+
+    div.name{ // container excluding motto
+
+        margin-top: 100px;
+        text-align: left;
+
+        justify-self: center;
+        
+        
     }
 
     h1.name{ // PROMETHEUS
@@ -45,13 +48,6 @@ section{
 
     }
 
-    div.typing-anim{
-        position: relative;
-        right: -11px;
-        color: #ff9400;
-        font-size: 1.3rem;
-    }
-
 
 
 
@@ -59,23 +55,24 @@ section{
 // icons
     .icon-landing{
         justify-self: center;
+
+        position: fixed;
+        right: 60px;
         
-        margin-top: auto;
-        margin-bottom: 2rem;
-        
+        top: calc(50vh - 100px) !important;
 
     }
 
 // statisic
     section.statistic{
 
-        
-        height: 300px;
+        width: 100vw;
+
+        height: 200px;
         background-color: black;
         align-items: center;
         
         margin-bottom: 10px;
-        width: 100%;
 
 
         
