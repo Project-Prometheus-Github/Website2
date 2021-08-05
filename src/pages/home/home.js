@@ -1,5 +1,6 @@
 
 import './home.scss';
+import PromLogo from '../../assets/logo1.png';
 
 
 import { IconContext } from "react-icons";
@@ -52,11 +53,14 @@ function Statistic(){
 function OurMission(){
   
   return(
-    <section className='mission column' >
-      <Line color='#FF9400' height={10} width={300} className='testing'/>
-      <h1 className ='f1 ' style={{color: "orange"}}>Our Mission</h1>
-      <h2 className = 'f2'  style={{color: "grey"}}> To spread the mesmerising apects of computer science and engineering to the world. </h2>
-      <h3 className = 'f2' style={{color: "black"}} >View our initiatives below.</h3>
+    <section className='mission row center-main' >
+      <div className = 'column'>
+        <Line color='#FF9400' height={10} width={300} className='testing'/>
+        <h1 className='f1' style={{color: "orange"}}>Our Mission</h1>
+        <h2 className='f2'  style={{color: "grey"}}> To spread the mesmerising apects of computer science and engineering to the world. </h2>
+        <h3 className='f2' style={{color: "black"}} >View our initiatives below.</h3>
+      </div>
+      <img className='' src={PromLogo} width={60} height={60}/>
     </section>
   )
   
@@ -83,15 +87,15 @@ function Initiatives(){
 // COMPONENTS
 function Name(){
   return (
-    <section className='name column center-cross'>
+    <section className='name row center-main'>
       <div className='column'>
-          <div className='row center-main f1'>
-            <h2 className='name vertical-text fire'>project</h2>
-            <h1 className='name'>prometheus</h1>
-            
-          </div>
-          <Typing className='name f2' words={['abcdef', 'abcg']}/>
+        <div className='row center-main f1'>
+          <h2 className='name vertical-text fire'>project</h2>
+          <h1 className='name'>prometheus</h1>
+          
         </div>
+        <Typing className='name f2' words={['Ignite the mind. Pass on the torch.']}/>
+      </div>
     </section>
   );
 }

@@ -7,11 +7,11 @@ function NavBar (){
       
       <div className='navbar row center-main f1'>
         <ClickableImage className='navbar' source={PromLogo} size={35} style={{position: 'relative', bottom: 1}}/>
-          <Link className='navbar'>Home</Link> 
-          <Link to='/about' className='navbar'>About Us</Link>
-          <Link className='navbar'>Projects</Link>
-          <Link className='navbar'>Articles</Link>
-          <Link className='navbar'>Editorials</Link>
+        <Link className='navbar'>Home</Link> 
+        <Link to='/about' className='navbar'>About Us</Link>
+        <Link className='navbar'>Projects</Link>
+        <Link className='navbar'>Articles</Link>
+        <Link className='navbar'>Editorials</Link>
 
       </div>
   

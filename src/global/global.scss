@@ -83,11 +83,12 @@ $global-grey: #999999;
         align-items: flex-start;
     }
 
-    Line.navbar{
+    a.navbar{
         margin: 0 10px;
         color: $global-grey;
         font-size: 28px;
         cursor: pointer;
+        text-decoration: none;
 
         &:hover{    //'hover': built into css
             transition-duration: 0.4s;

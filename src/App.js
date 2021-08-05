@@ -16,7 +16,8 @@ function App() {
   return ( 
     <Router>
       <Switch>
-        <Route path='/'>
+
+        <Route exact path='/'>
           <ParticlesContainer>
             <HomePage />
           </ParticlesContainer>
@@ -25,6 +26,7 @@ function App() {
         <Route path='/about'>
           <AboutPage />
         </Route>
+
       </Switch>
     </Router>
 

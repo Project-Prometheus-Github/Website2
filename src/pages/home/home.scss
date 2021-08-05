@@ -5,6 +5,7 @@ section{
     @include page-margin;
 }
 
+
 // name
     section.name{
         width: 100vw;
@@ -47,17 +48,8 @@ section{
 
     }
 
-    h3.name{ // slogan
-            
-        font-size: 36px;
-        align-self: floor;
-        //color: $global-grey;
-        margin: 0px;
-        
-        position: relative;
-        left: 10px;
 
-    }
+
 
 
 // icons
@@ -73,6 +65,9 @@ section{
 
 // statisic
     section.statistic{
+
+        width: 100vw;
+
         height: 200px;
         background-color: black;
         align-items: center;
