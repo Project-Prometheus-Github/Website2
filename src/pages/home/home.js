@@ -27,26 +27,22 @@ function HomePage(){
 // sections of the home page
 function Landing() {
     return (
-          <div className='column landing'>
-            <NavBar />       
-            <Name />
-            <SocialMediaIconsLanding />
-          </div>
-
-          
-        
+      <div className='column landing'>
+        <NavBar />       
+        <Name />
+        <SocialMediaIconsLanding />
+      </div>
     );
 }
 
 function Statistic(){
 
   var x = 4
-  var y = 8
 
   return (
     <section className='statistic row center-main'>
       
-      <h1 className='statistic f2'>{x} Articles shared. {y} Editorials written.</h1>
+      <Typing className='f2' words={[`${x} unique page views.`]}/>
     </section>
     
   );
