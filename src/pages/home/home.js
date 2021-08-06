@@ -1,3 +1,5 @@
+
+import React, { useState } from 'react';
 import './home.scss';
 import PromLogo from '../../assets/logo1.png';
 
@@ -37,12 +39,16 @@ function Landing() {
 
 function Statistic(){
 
-  var x = 4
+  var x = 4;
+  var y = 8;
 
   return (
     <section className='statistic row center-main'>
       
-      <Typing className='f2' words={[`${x} unique page views.`]}/>
+      <Typing loop={true} className='f2' words={[`${x} unique page views.`, `${y} articles written.`]}/>
+
+    
+
     </section>
     
   );
@@ -52,14 +58,14 @@ function Statistic(){
 function OurMission(){
   
   return(
-    <section className='mission row center-main' >
-      <div className = 'column'>
-        <Line color='#FF9400' height={10} width={300} className='testing'/>
-        <h1 className='f1' style={{color: "orange"}}>Our Mission</h1>
-        <h2 className='f2'  style={{color: "grey"}}> To spread the mesmerising apects of computer science and engineering to the world. </h2>
-        <h3 className='f2' style={{color: "black"}} >View our initiatives below.</h3>
+    <section className='mission row' >
+      <div className = 'mission column'>
+        <Line color='#808080' height={7} width={150} opacity={0.33} className=''/>
+        <h1 className='f1 mission'>Our Mission</h1>
+        <h2 className='f2 mission'style={{ whiteSpace: "pre" }}> {`To spread the mesmerising apects of \n computer science and engineering to the world.`} </h2>
+        <h3 className='f2 mission'>View our initiatives below.</h3>
       </div>
-      <img className='' src={PromLogo} width={60} height={60}/>
+      <img className='yabba' src={PromLogo} width={600} height={600}/>
     </section>
   )
   
@@ -73,10 +79,10 @@ function Initiatives(){
 
 
       <div className='initiatives-grid'>
-        <Tile title='Articles' text = 'bingus, arjun is a cool guy' onClick={() => {console.log("articles");}} background='#FF9400'/>
-        <Tile title='Editorials' onClick={() => {console.log("editorials");}} background='#000000'/>
-        <Tile title='CDSTechClub' onClick={() => {console.log("hello arjun");}} background='#008000'/>
-        <Tile title='CCC' onClick={() => {console.log("adam hello");}} background='#FF0000'/>
+        <Tile title='Articles' text='bingus, arjun is a cool guy' background='#FF9400'/>
+        <Tile title='Editorials' background='#000000'/>
+        <Tile title='CDS Tech Club'  background='#008000'/>
+        <Tile title='CCC' defaultText='test1' hoverText='please work' background='#FF0000'/>
       </div>
     </section>
   )
@@ -94,7 +100,7 @@ function Name(){
           
         </div>
         <div className='typing-anim'>
-          <Typing className='f2' words={['Ignite the mind. Pass on the torch.']}/>
+          <Typing loop={false} className='f2' words={['Ignite the mind. Pass on the torch.']}/>
         </div>
       </div>
     </section>
@@ -104,7 +110,7 @@ function Name(){
 function SocialMediaIconsLanding(){
   return (
     <div className='center-main icon-landing row moving2'>
-      <div  style={{backgroundColor: "white", justifyContent: 'center'}}>
+      <div  style={{justifyContent: 'center'}}>
         <FaInstagram className='icon'/>
         <FaTwitter className='icon'/>
         <FaGithub className='icon'/>
@@ -116,19 +122,40 @@ function SocialMediaIconsLanding(){
 
 
 
-function Tile({ title, text, image, onClick, background }) { // must be a part of a grid
+function Tile({ title, defaultText, hoverText, image, onClick, background }) { // must be a part of a grid
   const style = {
     backgroundImage: image,
-    gridArea: title.toLowerCase(), 
-    backgroundColor: background
+    gridArea: title.toLowerCase().replace(/\s/g, ''), 
+    backgroundColor: background,
   }
 
+  const [displayedText, setDisplayedText] = useState(defaultText); //properties that change THAT NEED TO BE RENDERED ALSO, defaultText is the initial state, useState returns a set of values, displayedText and setDisplayedText have a value of defaultText
+
+  const [textHoveringClass, setHoveringClass] = useState(false); //ones a setter one's a getter
+
+  const onMouseEnter = () => {
+    setHoveringClass('tile-text-hover');
+    setDisplayedText(hoverText);
+  }
+
+  const onMouseExit = () => {
+    setHoveringClass('tile-text-normal');
+    setDisplayedText(defaultText);
+  }  
+
+  
+
   return( // inline style
-    <div className='tile row center-main center-cross' onClick={onClick} style={style}>
-      <h1 className='f1 tile-text'>{title}</h1>
-      <p className='f2 tile-text'>{text}</p>
+    <div className='tile column' onClick={onClick} style={style} onMouseEnter={onMouseEnter} onMouseLeave={onMouseExit}>
+      <div className='tile-content'>
+        <h1 className='f1 tile-text'>{title}</h1>
+        <Line color='white' opacity={0.5} width='40%' />
+        <p className={`f2 tile-text ${textHoveringClass}`}>{displayedText}</p>
+      </div>
+
     </div>
   );
+
 }
 
 function TestingThing(){

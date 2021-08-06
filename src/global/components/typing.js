@@ -5,13 +5,13 @@ import Typed from 'typed.js';
 class Typing extends React.Component {
   componentDidMount() {
 
-    const { words } = this.props;
+    const { words, loop } = this.props; // {words: [...], loops: true, arjunwalia: idwaidwjaiej} props acting as parameter... they are properties of a component
 
     const options = {
       strings: words,
       typeSpeed: 30,
       backSpeed: 50,
-      loop: false,
+      loop: loop,
       cursorChar: "|",
     };
     // this.el refers to the <span> in the render() method
@@ -36,5 +36,7 @@ componentWillUnmount() {
     );
   }
 }
+
+
 
 export default Typing;

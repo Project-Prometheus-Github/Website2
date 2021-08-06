@@ -112,7 +112,7 @@ $global-grey: #999999;
 
 .testing{
     &:hover{   
-        opacity: 0.2;
+        @include hover-anim();
     }
 }
 
@@ -172,14 +172,14 @@ $global-grey: #999999;
     background-color: black;
 }
 
-.moving{
-    animation: blingy infinite;
-}
+// .moving{
+//     animation: blingy infinite;
+// }
 
-@keyframes blingy {
-    from {left: 0px;}
-    to {left: 200px;}
-}
+// @keyframes blingy {
+//     from {left: 0px;}
+//     to {left: 200px;}
+// }
 
 .moving2{
     animation: blingy2 2s;
@@ -199,3 +199,5 @@ $global-grey: #999999;
         z-index: 0;
     }
   }
+
+

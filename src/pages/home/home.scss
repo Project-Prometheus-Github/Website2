@@ -48,7 +48,7 @@ section{
     div.typing-anim{
         position: relative;
         right: -11px;
-        color: #ff9400;
+        color: black;
         font-size: 1.3rem;
     }
 
@@ -77,15 +77,12 @@ section{
         margin-bottom: 10px;
         width: 100%;
 
-
+        color: white;
+        font-size: 2.5rem;
+        // font-weight: 200;
         
     }
 
-    .statistic{
-        margin: 10px;
-        color: white;
-
-    }
 
 
 // tile
@@ -96,7 +93,23 @@ section{
     
     div.tile{
         //background-color:black;
+        justify-items: flex-start;
         
+    }
+
+    div.tile-content{
+        margin: 10px;
+        // justify-self: flex-;
+    }
+
+    .tile-text-normal{
+        font-size: 1.5rem;
+    }
+
+    .tile-text-hover{
+        font-size: 1.5rem;
+        color: black;
+        animation: blingy2 2s;
     }
 
     .initiatives-grid{
@@ -112,10 +125,35 @@ section{
         column-gap: 10px;
     }
  
-.mission{
-    height: 300px;
+section.mission{
+    margin-top:50px;
     justify-content: flex-start;
+    margin-bottom: 200px;
 }
+
+div.mission{
+    margin-top:150px;
+}
+
+h1.mission{
+    margin-top:0px;
+    color: #ff9400;
+    font-size: 120px;
+    margin-bottom:-10px;
+}
+
+h2.mission{
+    margin-top:-10px;
+    color: #A0A0A0;
+    opacity: 0.5;
+}
+
+h3.mission{
+    margin-top:-10px;
+    color:black;
+}
+
+img.mission{margin-left:auto;}
 
 
     

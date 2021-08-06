@@ -1,15 +1,16 @@
 import '../global.scss';
 
-function Line ({ color, height, width, className }){
+function Line ({ color, height=5, width, className, opacity }){
     
 
     var style = {
-        color: color,
+        //color: color,
         backgroundColor: color,
         height: height,
         border: 'none',
         width: width,
         margin: 0,
+        opacity: opacity 
     }
 
     return(

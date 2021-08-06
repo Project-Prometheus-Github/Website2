@@ -8,111 +8,111 @@ import "./global/global.scss";
 function ParticlesContainer({ children }) {
     const experimental = {
         particles: {
-        number: {
-            value: 125,
-            density: {
-            enable: true,
-            value_area: 1600
-            }
-        },
-        color: {
-            "value": "#808080"
-        },
-        shape: {
-            type: "circle",
-            stroke: {
-            width: 5,
-            color: "#808080"
+            number: {
+                value: 125,
+                density: {
+                    enable: true,
+                    value_area: 1600
+                }
             },
-            polygon: {
-            nb_sides: 5
+            color: {
+                value: "#808080"
             },
-            image: {
-            src: "img/github.svg",
-            width: 100,
-            height: 100
+            shape: {
+                type: "circle",
+                stroke: {
+                width: 5,
+                color: "#808080"
+                },
+                polygon: {
+                    nb_sides: 3
+                },
+                image: {
+                src: "img/github.svg",
+                width: 100,
+                height: 100
+                }
+            },
+            opacity: {
+                value: .5,
+                random: false,
+                anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.4,
+                sync: false
+                }
+            },
+            size: {
+                value: 1.5,
+                random: true,
+                anim: {
+                enable: false,
+                speed: 20,
+                size_min: 0.1,
+                sync: false
+                }
+            },
+            line_linked: {
+                enable: true,
+                distance: 200,
+                color: "#808080",
+                opacity: 1,
+                width: 0.6
+            },
+            move: {
+                enable: true,
+                speed: 1,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200
+                }
             }
-        },
-        opacity: {
-            value: .5,
-            random: false,
-            anim: {
-            enable: false,
-            speed: 1,
-            opacity_min: 0.4,
-            sync: false
-            }
-        },
-        size: {
-            value: 1.5,
-            random: true,
-            anim: {
-            enable: false,
-            speed: 20,
-            size_min: 0.1,
-            sync: false
-            }
-        },
-        line_linked: {
-            enable: true,
-            distance: 200,
-            color: "#808080",
-            opacity: 1,
-            width: 0.6
-        },
-        move: {
-            enable: true,
-            speed: 1,
-            direction: "none",
-            random: false,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-            enable: false,
-            rotateX: 600,
-            rotateY: 1200
-            }
-        }
         },
         interactivity: {
-        detect_on: "window",
-        events: {
-            onhover: {
-            enable: true,
-            mode: "bubble"
+            detect_on: "window",
+            events: {
+                onhover: {
+                enable: true,
+                mode: "bubble"
+                },
+                onclick: {
+                enable: false,
+                mode: "repulse"
+                },
+                resize: true
             },
-            onclick: {
-            enable: false,
-            mode: "repulse"
-            },
-            resize: true
-        },
-        modes: {
-            grab: {
-            distance: 400,
-            line_linked: {
-                opacity: 1
+            modes: {
+                grab: {
+                distance: 400,
+                line_linked: {
+                    opacity: 1
+                }
+                },
+                bubble: {
+                distance: 100,
+                size: 10,
+                duration: 2,
+                opacity: 8,
+                speed: 3
+                },
+                repulse: {
+                distance: 1,
+                duration: 40
+                },
+                push: {
+                particles_nb: 4
+                },
+                remove: {
+                particles_nb: 2
+                }
             }
-            },
-            bubble: {
-            distance: 100,
-            size: 10,
-            duration: 2,
-            opacity: 8,
-            speed: 3
-            },
-            repulse: {
-            distance: 1,
-            duration: 40
-            },
-            push: {
-            particles_nb: 4
-            },
-            remove: {
-            particles_nb: 2
-            }
-        }
         },
         retina_detect: true,
         collisions:
@@ -186,24 +186,28 @@ function ParticlesContainer({ children }) {
 	    }
     };
     const secondary = {
-        "particles": {
-	        "number": {
-	            "value": 50
+        particles: {
+	        number: {
+	            value: 100,
+                density: {
+                    enable: true,
+                    value_area: 1600
+                },
 	        },
-	        "size": {
-	            "value": 3
+	        size: {
+	            value: 3
 	        }
-	    },
-	    "interactivity": {
-	        "events": {
-	            "onhover": {
-	                "enable": true,
-	                "mode": "repulse"
+	    },  
+	    interactivity: {
+	        events: {
+	            onhover: {
+	                enable: true,
+	                mode: "repulse"
 	            }
 	        }
 	    }
-	
-    };
+        
+	}
     
 
     
@@ -211,8 +215,7 @@ function ParticlesContainer({ children }) {
         <>
             <div className='background'>
                 
-                <Particles
-                params={experimental} />
+                <Particles params={experimental} />
             </div>
             <div className='background'>
                 {children}
