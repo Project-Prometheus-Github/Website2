@@ -104,10 +104,12 @@ function Name(){
 function SocialMediaIconsLanding(){
   return (
     <div className='center-main icon-landing row moving2'>
-      <FaInstagram className='icon'/>
-      <FaTwitter className='icon'/>
-      <FaGithub className='icon'/>
-      <FaLinkedin className='icon'/>
+      <div  style={{backgroundColor: "white", justifyContent: 'center'}}>
+        <FaInstagram className='icon'/>
+        <FaTwitter className='icon'/>
+        <FaGithub className='icon'/>
+        <FaLinkedin className='icon'/>
+      </div>
     </div>
   );
 }
@@ -144,5 +146,3 @@ function TestingThing(){
 
 
 export default HomePage;
-
-

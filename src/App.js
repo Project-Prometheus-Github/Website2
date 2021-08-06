@@ -20,7 +20,7 @@ function App() {
         <Route exact path='/'>
            <ParticlesContainer>
               <HomePage />
-            </ParticlesContainer> 
+            </ParticlesContainer>
         </Route>
 
         <Route path='/about'>
