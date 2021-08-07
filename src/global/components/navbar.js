@@ -6,7 +6,6 @@ function NavBar (){
     return (
       <section className='row center-main'>
         <div className='navbar row f1'>
-          <ClickableImage className='navbar' source={PromLogo} size={35} style={{position: 'relative', bottom: 1}}/>
           <Link className='navbar'>Home</Link> 
           <Link to='/about' className='navbar'>About Us</Link>
           <Link className='navbar'>Projects</Link>

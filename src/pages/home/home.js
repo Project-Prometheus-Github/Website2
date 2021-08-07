@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './home.scss';
 import PromLogo from '../../assets/logo1.png';
+import PromLogo2 from '../../assets/logo3.png';
 
 
 import { IconContext } from "react-icons";
@@ -101,7 +102,11 @@ function Name(){
       <div className='column'>
         <div className='row center-main f1'>
           <h2 className='name vertical-text fire'>project</h2>
-          <h1 className='name'>prometheus</h1>
+        <div className = 'row etc'>
+          <h1 className='name'>pr</h1>
+          <img className='name' src={PromLogo2} width={130} height={130}/>
+          <h1 className = 'name2'> metheus</h1>
+        </div>
           
         </div>
         <div className='typing-anim'>
