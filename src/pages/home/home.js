@@ -68,8 +68,7 @@ function OurMission(){
       </div>
       <div classname = 'missionex'>
         <img className='mission' src={PromLogo} width={650} height={650}/>
-        <Oval color = 'green' size ={100} className = 'circleAT'/>
-        <Oval color = 'orange' size ={50} className = 'circleAT' style ={{position:"relative", left: 3000}}/>
+        
         {/* <Circles color1 ='green' size = {100} className ='circleAT' color2 = 'orange' size2 = {50} className2 = 'circleAt'/> */}
       </div>
     </section>
@@ -175,7 +174,7 @@ function TestingThing(){
   return(
   <div>
     <div className ='circle' ></div> 
-    <h1 className = 'yabba'> my namea jeff</h1>
+    <h1 className = 'yabba'>z</h1>
   </div>
   )
 }
