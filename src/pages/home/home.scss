@@ -109,7 +109,7 @@ section{
     .tile-text-hover{
         font-size: 1.5rem;
         color: black;
-        animation: blingy2 2s;
+        animation: blingy2 8s;
     }
 
     .initiatives-grid{
@@ -133,6 +133,7 @@ section.mission{
 
 div.mission{
     margin-top:150px;
+    margin-right:auto;
 }
 
 h1.mission{
@@ -153,7 +154,27 @@ h3.mission{
     color:black;
 }
 
-img.mission{margin-left:auto;}
+img.mission{margin-right:auto;}
+
+.circleAT {
+    border-radius: 50%;
+    margin-right: 100px;
+    display: flex;
+  }
 
 
+.missionex{
     
+}
+
+
+.yabba{
+    color: inherit; 
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms;
+
+  
+  &:hover {
+    text-decoration-color: rgba(255, 255, 0, 1);
+  }
+}

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './home.scss';
 import PromLogo from '../../assets/logo1.png';
@@ -11,7 +10,9 @@ import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import NavBar from '../../global/components/navbar';
 
 import Typing from '../../global/components/typing.js';
-import Line from '../../global/components/horizontal-line.js'
+import Line from '../../global/components/horizontal-line.js';
+import Circles from '../../global/components/overlapping.js';
+import Oval from '../../global/components/ovals.js';
 
 
 function HomePage(){
@@ -21,7 +22,7 @@ function HomePage(){
       <Statistic />
       <OurMission />
       <Initiatives />
-      <TestingThing />
+      {/* <TestingThing /> */}
     </>
   );
 }
@@ -65,7 +66,12 @@ function OurMission(){
         <h2 className='f2 mission'style={{ whiteSpace: "pre" }}> {`To spread the mesmerising apects of \n computer science and engineering to the world.`} </h2>
         <h3 className='f2 mission'>View our initiatives below.</h3>
       </div>
-      <img className='yabba' src={PromLogo} width={600} height={600}/>
+      <div classname = 'missionex'>
+        <img className='mission' src={PromLogo} width={650} height={650}/>
+        <Oval color = 'green' size ={100} className = 'circleAT'/>
+        <Oval color = 'orange' size ={50} className = 'circleAT' style ={{position:"relative", left: 3000}}/>
+        {/* <Circles color1 ='green' size = {100} className ='circleAT' color2 = 'orange' size2 = {50} className2 = 'circleAt'/> */}
+      </div>
     </section>
   )
   
@@ -163,11 +169,14 @@ function TestingThing(){
     width: '100px',
     height: '100px',
     background: 'red',
-    position: 'relative',
+    position: 'relative'
   }
 
   return(
-    <div className ='moving' style={style}> </div> 
+  <div>
+    <div className ='circle' ></div> 
+    <h1 className = 'yabba'> my namea jeff</h1>
+  </div>
   )
 }
 
