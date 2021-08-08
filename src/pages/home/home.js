@@ -9,6 +9,8 @@ import { FontAwesome } from "react-icons/fa";
 import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import NavBar from '../../global/components/navbar';
+import Footer from '../../global/components/footer';
+
 
 import Typing from '../../global/components/typing.js';
 import Line from '../../global/components/horizontal-line.js';
@@ -23,6 +25,7 @@ function HomePage(){
       <Statistic />
       <OurMission />
       <Initiatives />
+      <Footer />
       {/* <TestingThing /> */}
     </>
   );
@@ -61,17 +64,13 @@ function OurMission(){
   
   return(
     <section className='mission row' >
-      <div className = 'mission column'>
-        <Line color='#808080' height={7} width={150} opacity={0.33} className=''/>
-        <h1 className='f1 mission'>Our Mission</h1>
-        <h2 className='f2 mission'style={{ whiteSpace: "pre" }}> {`To spread the mesmerising apects of \n computer science and engineering to the world.`} </h2>
-        <h3 className='f2 mission'>View our initiatives below.</h3>
-      </div>
-      <div classname = 'missionex'>
-        <img className='mission' src={PromLogo} width={650} height={650}/>
-        
-        {/* <Circles color1 ='green' size = {100} className ='circleAT' color2 = 'orange' size2 = {50} className2 = 'circleAt'/> */}
-      </div>
+        <div className = 'mission column'>
+          <Line color='#808080' height={7} width={150} opacity={0.33} className='henry'/>
+          <h1 className='f1 mission'>Our Mission</h1>
+          <h2 className='f2 mission'style={{ whiteSpace: "pre" }}> {`To spread the mesmerising apects of computer \n science and engineering to the world.`} </h2>
+          <h3 className='f2 mission'>View our initiatives below.</h3>
+        </div>
+        <img className='mission' src={PromLogo}/> 
     </section>
   )
   
@@ -93,21 +92,57 @@ function Initiatives(){
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   }
 
+  const ccc = {
+    heading: "CCC",
+    subheading: "Lorem ipsum dolor sit amet.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }
+
+  const techClub = {
+    heading: "Tech Club",
+    subheading: "Lorem ipsum dolor sit amet.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  }
+
   return(
     <section className='initiatives row center-main'>
-      <Card 
-        heading={articles.heading}
-        subheading={articles.subheading}
-        description={articles.description}
-        href='/about'
-      />
+      <div className='initiatives row'>
+        <Card 
+          heading={articles.heading}
+          subheading={articles.subheading}
+          description={articles.description}
+          href='/about'
+          viewOur ={'articles'}
+        />
 
-      <Card 
-        heading={editorials.heading}
-        subheading={editorials.subheading}
-        description={editorials.description}
-      />
+        <Card 
+          heading={editorials.heading}
+          subheading={editorials.subheading}
+          description={editorials.description}
+          href='/about'
+          viewOur ={'editorials'}
 
+        />
+
+        <Card 
+          heading={ccc.heading}
+          subheading={ccc.subheading}
+          description={ccc.description}
+          href='/about'
+          viewOur ={'solutions'}
+
+        />
+
+        <Card 
+          heading={techClub.heading}
+          subheading={techClub.subheading}
+          description={techClub.description}
+          href='/about'
+          viewOur ={'accomplishments'}
+
+
+        />
+      </div>
       
 
 {/* 
@@ -213,24 +248,22 @@ function TestingThing(){
 }
 
 
-function Card({ heading, subheading, description, href='#'}){
-
-  
-
+function Card({ heading, subheading, description, viewOur, href='#'}){
   return (
-    <div>
       <a className='card' href={href}>
         <h3 className='f1 card'>{heading}</h3>
         <h4 className='f2 card'>{subheading}</h4>
         <p className='f2 card'>{description}</p>
-        <span class="link-text f2">
-          View our {heading.toLowerCase()}
-            <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#753BBD"/>
+        <span class="link-text f2 column">
+          View our {viewOur}.
+          <span className = 'column arrow'>
+            <svg className = 'arrow' width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#FF9400"/>
             </svg>
+            </span>
         </span>
       </a>
-    </div>
+
   );
 }
 

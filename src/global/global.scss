@@ -208,4 +208,62 @@ $global-grey: #999999;
     }
   }
 
+div.footer{
+    margin-top:30px;
+    margin-left:20px;
 
+}
+section.footer{
+    width: 100%;
+    justify-content: space-between;
+    background-color:black;
+    height: 200px;
+
+}
+
+h1.footer{
+    color:orange;
+    margin:0;
+    
+}
+
+h2.footer{
+    color:orange;
+    margin:0;
+    position:relative;
+    bottom: 15px;
+    font-size:75px;
+    height:auto;
+}
+
+
+
+.fire2{
+    animation: breathe-text 5s linear infinite;
+}
+
+@keyframes breathe-text{
+    0% {
+        color: #FF9400
+    }
+
+    40%{
+        color:red
+    }
+
+    100%{
+        color:#FF9400
+    }
+    
+    
+}
+
+.more
+{
+    height:auto;
+    width:auto;
+}
+
+.footicons
+{
+}
