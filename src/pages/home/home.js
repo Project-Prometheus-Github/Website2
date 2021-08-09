@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './home.scss';
 import PromLogo from '../../assets/logo1.png';
 import PromLogo2 from '../../assets/logo3.png';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 import { IconContext } from "react-icons";
@@ -249,8 +252,11 @@ function TestingThing(){
 
 
 function Card({ heading, subheading, description, viewOur, href='#'}){
+  useEffect(() => {
+    Aos.init({duration:3000});
+  },[]);
   return (
-      <a className='card' href={href}>
+      <a data-aos="fade-up"className='card' href={href}>
         <h3 className='f1 card'>{heading}</h3>
         <h4 className='f2 card'>{subheading}</h4>
         <p className='f2 card'>{description}</p>
