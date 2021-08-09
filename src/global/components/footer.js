@@ -14,7 +14,7 @@ function Footer (){
             </div>
          <h2 className ='f1 footer'>Prometheus</h2>
         </div>
-        <div className ='column footicons'>
+        <div className ='row footicons'>
         <FaInstagram className='icon'/>
         <FaTwitter className='icon'/>
         <FaGithub className='icon'/>

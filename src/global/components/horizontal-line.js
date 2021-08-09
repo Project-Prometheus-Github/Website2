@@ -9,7 +9,8 @@ function Line ({ color, height=5, width, className, opacity }){
         height: height,
         border: 'none',
         width: width,
-        margin: 0,
+        marginLeft: 0,
+        marginRight: 0,
         opacity: opacity 
     }
 

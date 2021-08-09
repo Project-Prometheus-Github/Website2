@@ -49,7 +49,7 @@ function Statistic(){
 
   return (
     <section className='statistic row center-main'>
-      
+      <span>&#8203;</span>
       <Typing loop={true} className='f2' words={[`${x} unique page views.`, `${y} articles written.`]}/>
 
     
@@ -62,13 +62,19 @@ function Statistic(){
 
 function OurMission(){
   
+  // {`To spread the mesmerising apects of computer \n science and engineering to the world.`}
+
   return(
     <section className='mission row' >
-        <div className = 'mission column'>
-          <Line color='#808080' height={7} width={150} opacity={0.33} className='henry'/>
-          <h1 className='f1 mission'>Our Mission</h1>
-          <h2 className='f2 mission'style={{ whiteSpace: "pre" }}> {`To spread the mesmerising apects of computer \n science and engineering to the world.`} </h2>
-          <h3 className='f2 mission'>View our initiatives below.</h3>
+        <div className='mission column center-main'>
+          <div className='column'>
+
+              <h1 className='f1 mission'>Our Mission</h1>
+              <Line color='#FF9400' height={3} width={300} className='mission-line'/>
+              <h2 className='f2 mission'> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h2>
+              <h3 className='f2 mission'>View our initiatives below.</h3>
+
+            </div>
         </div>
         <img className='mission' src={PromLogo}/> 
     </section>
@@ -112,7 +118,7 @@ function Initiatives(){
           subheading={articles.subheading}
           description={articles.description}
           href='/about'
-          viewOur ={'articles'}
+          viewOur='articles'
         />
 
         <Card 
@@ -120,7 +126,7 @@ function Initiatives(){
           subheading={editorials.subheading}
           description={editorials.description}
           href='/about'
-          viewOur ={'editorials'}
+          viewOur='editorials'
 
         />
 
@@ -129,7 +135,7 @@ function Initiatives(){
           subheading={ccc.subheading}
           description={ccc.description}
           href='/about'
-          viewOur ={'solutions'}
+          viewOur='solutions'
 
         />
 
@@ -138,7 +144,7 @@ function Initiatives(){
           subheading={techClub.subheading}
           description={techClub.description}
           href='/about'
-          viewOur ={'accomplishments'}
+          viewOur='accomplishments'
 
 
         />

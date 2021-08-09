@@ -1,7 +1,27 @@
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ececec;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #2E3C40;
+    border-radius: 1em;
+}
+
+
 // global colors
 
-$global-orange: #FF9400;
-$global-grey: #999999;
+$orange: #FF9400;
+$dark-grey: #2E3C40;
+$light-grey: #627084;
+$bg-white: #f6f6f6;
+
+
 
 
 //global fonts
