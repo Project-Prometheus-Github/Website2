@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './home.scss';
 import PromLogo from '../../assets/logo1.png';
 import PromLogo2 from '../../assets/logo3.png';
+import ParticlesContainer from '../../particles.js';
+
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -22,13 +24,21 @@ import Oval from '../../global/components/ovals.js';
 
 
 function HomePage(){
+  
+
   return (
     <>
-      <Landing />
+      <ParticlesContainer height='100vh'>
+        <Landing />
+      </ParticlesContainer>
+    
       <Statistic />
+    <ParticlesContainer height={1231}>
       <OurMission />
       <Initiatives />
+    </ParticlesContainer>
       <Footer />
+    
       {/* <TestingThing /> */}
     </>
   );
@@ -259,7 +269,8 @@ function TestingThing(){
 
 function Card({ heading, subheading, description, viewOur, href='#'}){
   useEffect(() => {
-    Aos.init({duration:3000});
+    Aos.init({duration:3000, once:true});
+    
   },[]);
   return (
       <a data-aos="fade-up"className='card' href={href}>
@@ -267,7 +278,7 @@ function Card({ heading, subheading, description, viewOur, href='#'}){
         <h4 className='f2 card'>{subheading}</h4>
         <p className='f2 card'>{description}</p>
         <span class="link-text f2 column">
-          View our {viewOur}.
+          View our {viewOur}
           <span className = 'column arrow'>
             <svg className = 'arrow' width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8631 0.929124L24.2271 7.29308C24.6176 7.68361 24.6176 8.31677 24.2271 8.7073L17.8631 15.0713C17.4726 15.4618 16.8394 15.4618 16.4489 15.0713C16.0584 14.6807 16.0584 14.0476 16.4489 13.657L21.1058 9.00019H0.47998V7.00019H21.1058L16.4489 2.34334C16.0584 1.95281 16.0584 1.31965 16.4489 0.929124C16.8394 0.538599 17.4726 0.538599 17.8631 0.929124Z" fill="#FF9400"/>

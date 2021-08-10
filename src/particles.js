@@ -5,7 +5,7 @@ import "./global/global.scss";
 // documentation https://www.npmjs.com/package/react-particles-js
 // working example code https://codesandbox.io/s/4k5z9xx0w?file=/src/ParticleComponent.js:95-224
 
-function ParticlesContainer({ children }) {
+function ParticlesContainer({ children, height }) {
     const experimental = {
         particles: {
             number: {
@@ -211,16 +211,25 @@ function ParticlesContainer({ children }) {
     
 
     
-    return (
-        <>
-            <div className='background'>
+    // return (
+    //     <>
+    //         <div className='background' style={style}>
                 
-                <Particles params={experimental} />
-            </div>
-            <div className='background'>
-                {children}
-            </div>
-        </>
+    //             <Particles params={experimental} height={height}/>
+    //         </div>
+    //         <div>
+    //             {children}
+    //         </div>
+    //     </>
+    // );
+
+    console.log(height);
+    return (
+        <div className='column relative'>
+
+            <Particles className='background' params={experimental} height={height}/>
+            {children}
+        </div>
     );
 
 }

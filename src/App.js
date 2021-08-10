@@ -3,7 +3,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import "./global/global.scss";
-import ParticlesContainer from './particles.js';
 import HomePage from "./pages/home/home.js"
 import AboutPage from "./pages/about/about.js"
 
@@ -18,9 +17,7 @@ function App() {
       <Switch>
 
         <Route exact path='/'>
-           <ParticlesContainer>
-              <HomePage />
-            </ParticlesContainer>
+          <HomePage />
         </Route>
 
         <Route path='/about'>
