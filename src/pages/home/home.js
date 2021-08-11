@@ -18,10 +18,10 @@ import Footer from '../../global/components/footer';
 
 
 import Typing from '../../global/components/typing.js';
-import Line from '../../global/components/horizontal-line.js';
+import Line from '../../global/components/line.js';
 import Circles from '../../global/components/overlapping.js';
 import Oval from '../../global/components/ovals.js';
-
+import IconGroup from '../../global/components/icon-group.js';
 
 function HomePage(){
   
@@ -203,12 +203,14 @@ function Name(){
 
 function SocialMediaIconsLanding(){
   return (
-    <div className='center-main icon-landing row moving2'>
-        <FaInstagram className='icon'/>
-        <FaTwitter className='icon'/>
-        <FaGithub className='icon'/>
-        <FaLinkedin className='icon'/>
-    </div>
+    // <div className='center-main icon-landing row moving2'>
+    //     <FaInstagram className='icon'/>
+    //     <FaTwitter className='icon'/>
+    //     <FaGithub className='icon'/>
+    //     <FaLinkedin className='icon'/>
+    // </div>
+
+    <IconGroup className='center-main icon-landing moving2'/>
   );
 }
 
