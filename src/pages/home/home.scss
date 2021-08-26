@@ -313,8 +313,9 @@ a.card {
     }
     
     &:hover {
-      background: #FF9400;
-      transform: scale(1.02);
+      background-color: #FF9400;
+    //   transition-duration: 0.45s;
+    //   transform: scale(1.2);
       
       h3.card  {
         color: #FFFFFF;
