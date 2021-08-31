@@ -21,10 +21,10 @@ import Typing from '../../global/components/typing.js';
 import Line from '../../global/components/line.js';
 import Circles from '../../global/components/overlapping.js';
 import Oval from '../../global/components/ovals.js';
-import IconGroup from '../../global/components/icon-group.js';
+
 
 function HomePage(){
-  
+
 
   return (
     <>
@@ -48,7 +48,7 @@ function HomePage(){
 function Landing() {
     return (
       <div className='column landing'>
-        <NavBar />       
+        <NavBar selected = {0}/>       
         <Name />
         <SocialMediaIconsLanding />
       </div>
@@ -203,14 +203,12 @@ function Name(){
 
 function SocialMediaIconsLanding(){
   return (
-    // <div className='center-main icon-landing row moving2'>
-    //     <FaInstagram className='icon'/>
-    //     <FaTwitter className='icon'/>
-    //     <FaGithub className='icon'/>
-    //     <FaLinkedin className='icon'/>
-    // </div>
-
-    <IconGroup className='center-main icon-landing moving2'/>
+    <div className='center-main icon-landing row moving2'>
+        <FaInstagram className='icon'/>
+        <FaTwitter className='icon'/>
+        <FaGithub className='icon'/>
+        <FaLinkedin className='icon'/>
+    </div>
   );
 }
 
@@ -275,11 +273,11 @@ function Card({ heading, subheading, description, viewOur, href='#'}){
     
   },[]);
   return (
-      <a data-aos="fade-up"className='card' href={href}>
+      <a data-aos="fade-up" className='card' href={href}>
         <h3 className='f1 card'>{heading}</h3>
         <h4 className='f2 card'>{subheading}</h4>
         <p className='f2 card'>{description}</p>
-        <span class="link-text f2 column">
+        <span className="link-text f2 column">
           View our {viewOur}
           <span className = 'column arrow'>
             <svg className = 'arrow' width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
