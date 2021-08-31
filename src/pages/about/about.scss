@@ -7,5 +7,30 @@
 section.bingusberry{
     height:100vh;
     width:auto;
-    // background-color: red;
+    background-color: red;
+}
+
+.TeamTiles{
+    width:75%;
+    margin-bottom: 300px;
+}
+
+
+
+
+
+
+.card{
+    flex: 1;
+}
+
+
+p.mission{
+    margin-top:2rem;
+    text-align:center;
+    font-weight: bold;
+}
+
+.sepLines{
+    margin-right:40px;
 }

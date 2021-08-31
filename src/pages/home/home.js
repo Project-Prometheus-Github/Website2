@@ -19,8 +19,7 @@ import Footer from '../../global/components/footer';
 
 import Typing from '../../global/components/typing.js';
 import Line from '../../global/components/line.js';
-import Circles from '../../global/components/overlapping.js';
-import Oval from '../../global/components/ovals.js';
+
 
 
 function HomePage(){

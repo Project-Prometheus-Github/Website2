@@ -41,7 +41,6 @@ function NavBar ({selected}){ //'home', 'about', 'proj', 'arti', 'edit']
     ]
 
 
-    console.log(peopleObj);
     peopleObj.map((obj, index) => {
       console.log(obj + ' is at ' + (obj.age + index) + ' index.')
     })
