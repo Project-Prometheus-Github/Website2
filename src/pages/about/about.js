@@ -31,9 +31,9 @@ function AboutPage(){
         <>
             <NavBar selected = {1} />
             <OurMission />
-            <Line color='#FF9400' height={3} width={300} className='sepLines'/>            
+            <Line color='#FF9400' height={3} width={'auto'} className='sepLines'/>            
             <WhoWeAre />
-            <Line color='#FF9400' height={3} width={300} className='sepLines'/>            
+            <Line color='#FF9400' height={3} width={'auto'} className='sepLines'/>            
             <MeetTeam />
             <Footer />       
         </>
@@ -69,38 +69,43 @@ function OurMission(){
 function WhoWeAre(){
     return(
     
-        <section>
-            <h1 className = 'f2'> Ignite the mind. Pass on the torch.</h1>
+        <section className = 'who' width= '100%'>
+            <div className = 'row'>
+                <h1 className = 'f1 vertical-text who'> Who Are We?</h1>
+                <p className = 'f2 who'> SAMPLETEXT SAMPLETEXT SAMPLETEXT SAMPLETEXT SAMPLETEXTSAMPLETEXT SAMPLETEXTSAMPLETEXTSAMPLETEXTSAMPLETEXTSAMPLETEXTSAMPLETEXT</p>
+            </div>
         </section>
     );
 }
 
 function MeetTeam(){
     return(
-    
-        <section className='TeamTiles row center-main'>
-            <Card 
-                heading='Henry'
-                subheading='chinese guy'
-                description='lorem ipsum'
-            />
-            <Card 
-                heading='Arjun'
-                subheading='windia'
-                description='lorem ipsum'
-            />
-            <Card 
-                heading='Robert'
-                subheading='chinese guy 2'
-                description='lorem ipsum'
-            />
-            <Card 
-                heading='Adam'
-                subheading='chinese guy 3'
-                description='lorem ipsum'
-            />
+    <section className = 'team'>
+        <h1 className = 'f1 team vertical-text'> Who Are We?</h1>
+            <section className='TeamTiles row center-main'>
+                <Card 
+                    heading='Henry'
+                    subheading='chinese guy'
+                    description='lorem ipsum'
+                />
+                <Card 
+                    heading='Arjun'
+                    subheading='windia'
+                    description='lorem ipsum'
+                />
+                <Card 
+                    heading='Robert'
+                    subheading='chinese guy 2'
+                    description='lorem ipsum'
+                />
+                <Card 
+                    heading='Adam'
+                    subheading='chinese guy 3'
+                    description='lorem ipsum'
+                />
+            </section>
         </section>
-    );
+        );
 }
 
 

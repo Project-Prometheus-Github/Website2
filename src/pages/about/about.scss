@@ -32,5 +32,32 @@ p.mission{
 }
 
 .sepLines{
-    margin-right:40px;
+    margin-right: 400px;
+}
+
+h1.who{
+    color: #FF9400;
+    margin-left:-160px;
+    font-size:40px;
+}
+
+p.who{
+    margin-left:100px;
+}
+
+section.who{
+    display:flex;
+}
+
+section.team{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+h1.team{
+    color: #FF9400;
+    font-size:40px;
+    text-align: center;
+    
 }
