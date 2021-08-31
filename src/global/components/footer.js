@@ -35,13 +35,6 @@ function Footer(){
     },
   ]
 
-  const contact = [
-    {
-      text: 'projectprometheuslead@gmail.com',
-      link: 'mailto:projectprometheuslead@gmail.com',
-    },
-  ];
-
 
   return(
     <section className='footer'>

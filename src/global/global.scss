@@ -304,6 +304,7 @@ section.footer{
         font-size: 2rem;
         grid-area: h5;
         margin: 0;
+        position: relative; 
     }
 
     & > h6{
@@ -322,6 +323,7 @@ section.footer{
     & > p{
         grid-area: desc;
         margin: 0;
+        color: $light-grey;
     }
 }
 
