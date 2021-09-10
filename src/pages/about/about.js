@@ -103,6 +103,12 @@ function MeetTeam(){
                     subheading='chinese guy 3'
                     description='lorem ipsum'
                 />
+
+                <Card 
+                    heading='Marianna'
+                    subheading='chinese guy 3'
+                    description='lorem ipsum'
+                />
             </section>
         </section>
         );
