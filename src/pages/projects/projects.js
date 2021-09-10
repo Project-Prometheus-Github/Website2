@@ -48,3 +48,6 @@ function Event({ right, heading, description, src }){
         </section>
     );
 }
+
+
+export default ProjectsPage;

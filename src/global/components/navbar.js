@@ -47,7 +47,7 @@ function NavBar ({selected}){ //'home', 'about', 'proj', 'arti', 'edit']
 
     
     const text = ['Home','About Us','Projects', 'Articles', 'Editorials'];
-    const links = ['','/about','','',''];
+    const links = ['','/about','/projects','',''];
 
 
     return (

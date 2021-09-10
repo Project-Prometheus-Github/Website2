@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import "./global/global.scss";
 import HomePage from "./pages/home/home.js"
 import AboutPage from "./pages/about/about.js"
+import ProjectsPage from "./pages/projects/projects.js"
+
 
 // figma design https://www.figma.com/file/24mDiMckplH7BUcGwQfnJW/ProjectPrometheus
 // 
@@ -21,6 +23,10 @@ function App() {
         </Route>
 
         <Route path='/about'>
+          <AboutPage />
+        </Route>
+
+        <Route path='/projects'>
           <AboutPage />
         </Route>
 
