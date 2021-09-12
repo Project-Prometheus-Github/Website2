@@ -7,6 +7,8 @@ import 'aos/dist/aos.css';
 import './about.scss';
 import '../../global/global.scss'
 
+import { ReactComponent as Logo } from './bingus.svg';
+
 
 
 
@@ -35,6 +37,7 @@ function AboutPage(){
             <WhoWeAre />
             <Line color='#FF9400' height={3} width={'auto'} className='sepLines'/>            
             <MeetTeam />
+            <Logo />
             <Footer />       
         </>
     );
@@ -81,7 +84,7 @@ function WhoWeAre(){
 function MeetTeam(){
     return(
     <section className = 'team'>
-        <h1 className = 'f1 team vertical-text'> Who Are We?</h1>
+        <h1 className = 'f1 team vertical-text'> Meet The Team</h1>
             <section className='TeamTiles row center-main'>
                 <Card 
                     heading='Henry'
@@ -100,6 +103,12 @@ function MeetTeam(){
                 />
                 <Card 
                     heading='Adam'
+                    subheading='chinese guy 3'
+                    description='lorem ipsum'
+                />
+
+                <Card 
+                    heading='Marianna'
                     subheading='chinese guy 3'
                     description='lorem ipsum'
                 />

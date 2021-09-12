@@ -11,7 +11,7 @@ section.bingusberry{
 }
 
 .TeamTiles{
-    width:75%;
+    width:100%;
     margin-bottom: 300px;
 }
 
@@ -22,6 +22,7 @@ section.bingusberry{
 
 .card{
     flex: 1;
+    width:auto;
 }
 
 
@@ -59,5 +60,23 @@ h1.team{
     color: #FF9400;
     font-size:40px;
     text-align: center;
+    margin: 0;
     
 }
+
+
+#animation{
+    stroke-dasharray: 1254.6748046875;
+    stroke-dashoffset: 1254.6748046875;
+    animation: dash 10s linear alternate infinite;
+
+    @keyframes dash {
+    from {
+        stroke-dashoffset: 1254.6748046875;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+    }
+}
+
