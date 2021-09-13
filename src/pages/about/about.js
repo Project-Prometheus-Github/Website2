@@ -44,7 +44,7 @@ function AboutPage(){
 }
 
 
-function Card({ heading, subheading, description}){
+function Card({ heading, subheading, description, children}){
     useEffect(() => {
       Aos.init({duration:2000, once:true});
       
@@ -52,8 +52,9 @@ function Card({ heading, subheading, description}){
     return (
         <a data-aos="fade-up" className='card' href=''>
           <h3 className='f1 card'>{heading}</h3>
-          <h4 className='f2 card'>{subheading}</h4>
+          <h4 clas sName='f2 card'>{subheading}</h4>
           <p className='f2 card'>{description}</p>
+          {children}
         </a>
   
     );
@@ -81,6 +82,22 @@ function WhoWeAre(){
     );
 }
 
+
+// function foo(){
+//     return (
+//         <> 
+//             <button />
+//             <button></button>
+
+
+//             <Card>
+                
+//             </Card>
+//         </>
+//     );
+// }
+
+
 function MeetTeam(){
     return(
     <section className = 'team'>
@@ -90,7 +107,9 @@ function MeetTeam(){
                     heading='Henry'
                     subheading='chinese guy'
                     description='lorem ipsum'
-                />
+                >
+                 <Logo />
+                </Card>
                 <Card 
                     heading='Arjun'
                     subheading='windia'

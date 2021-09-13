@@ -66,17 +66,19 @@ h1.team{
 
 
 #animation{
-    stroke-dasharray: 1254.6748046875;
-    stroke-dashoffset: 1254.6748046875;
-    animation: dash 10s linear alternate infinite;
+    
+    stroke-dasharray: 1254.6748046875; // ARRAY
+    animation: dash 4s ease-in-out;
+    opacity: 1;
 
     @keyframes dash {
-    from {
-        stroke-dashoffset: 1254.6748046875;
+        from {
+            stroke-dashoffset: 1254.6748046875;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
     }
-    to {
-        stroke-dashoffset: 0;
-    }
-    }
+    
 }
 
